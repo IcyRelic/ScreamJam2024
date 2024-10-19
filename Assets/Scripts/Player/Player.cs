@@ -17,6 +17,10 @@ public class Player : MonoBehaviour
     public float movementSpeed = 2.5f;
     [SerializeField] [Min(1)] private float interactableDistance = 1f;
 
+
+    /*** Variables ***/
+    private Interactable currentInteractable;
+
     private void Awake()
     {
         controller = GetComponent<PlayerController>();
@@ -35,20 +39,35 @@ public class Player : MonoBehaviour
 
     private void GetInteractables()
     {
-        Collider2D interactable = Physics2D.OverlapCircle(transform.position, interactableDistance, interactableLayer);
+        Collider2D c2d = Physics2D.OverlapCircle(transform.position, interactableDistance, interactableLayer);
 
-        if(interactable != null)
-        {
-            interactableUI.text = $"Interact {controller.GetControlSprite(controller.Interact)}";
-
-            
-        }
-        else
+        // If there is no interactable, return
+        if(c2d == null)
         {
             interactableUI.text = "";
+            if(currentInteractable != null)
+            {
+                currentInteractable.Unhighlight();
+                currentInteractable = null;
+            }
+            return;
         }
 
-        
+        interactableUI.text = $"Interact {controller.GetControlSprite(controller.Interact)}";
+
+        // If the interactable is the same as the current interactable, return
+        Interactable interactable = c2d.GetComponent<Interactable>();
+        if(interactable == currentInteractable) return;
+
+        // If the interactable is different from the current interactable, highlight the new interactable
+        if(currentInteractable != null)
+        {
+            currentInteractable.Unhighlight();
+        }
+
+        currentInteractable = interactable;
+
+        currentInteractable.Highlight();        
     }
     private void ProcessInput()
     {
