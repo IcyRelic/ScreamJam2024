@@ -32,11 +32,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 2274370818432731551}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -104.2}
-  m_SizeDelta: {x: 1000, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1, y: 0.25}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &1805586098509817183
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Interact <sprite="gamepad" name="Gamepad_buttonSouth">
+  m_text: I should hurry...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1008168f188e69240929fd9328dc650a, type: 2}
   m_sharedMaterial: {fileID: 1216209837124808206, guid: 1008168f188e69240929fd9328dc650a, type: 2}
@@ -92,15 +92,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32
-  m_fontSizeBase: 32
+  m_fontSize: 0.065
+  m_fontSizeBase: 0.065
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 1024
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -286,6 +286,7 @@ GameObject:
   - component: {fileID: 7076941472845341428}
   - component: {fileID: 3674137515311879443}
   - component: {fileID: 4627835362022256591}
+  - component: {fileID: 4545331941982666405}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -302,8 +303,8 @@ Transform:
   m_GameObject: {fileID: 3389264275695802390}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.58, z: 0}
-  m_LocalScale: {x: 0.1667, y: 0.1667, z: 0.1667}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2274370818432731551}
@@ -351,8 +352,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: -1043506121, guid: 0c392eb3bfabe374aa250a51c77ad7cc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -379,8 +380,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   interactableUI: {fileID: 6507515713549004647}
-  movementSpeed: 1
-  interactableDistance: 1
+  movementSpeed: 0.5
+  interactableDistance: 0.15
 --- !u!114 &8227863891706504555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -459,7 +460,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 0.055577785
+  m_Mass: 0.0020893833
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -506,19 +507,40 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0013684034, y: -0.08581376}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 2}
+    oldSize: {x: 0.13, y: 0.23}
     newSize: {x: 1, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 0.07096648, y: 0.029441833}
   m_EdgeRadius: 0
+--- !u!95 &4545331941982666405
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3389264275695802390}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5e19c325368fc7547b642b3ff00f8f47, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4290740925759942784
 GameObject:
   m_ObjectHideFlags: 0
@@ -629,16 +651,16 @@ RectTransform:
   m_GameObject: {fileID: 5418301662477306271}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 483075333262022248}
   m_Father: {fileID: 8656526019500954142}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 2.171}
-  m_SizeDelta: {x: 100, y: 20}
+  m_AnchoredPosition: {x: 0, y: 0.25}
+  m_SizeDelta: {x: 0.5, y: 0.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &6206061075202662976
 Canvas:

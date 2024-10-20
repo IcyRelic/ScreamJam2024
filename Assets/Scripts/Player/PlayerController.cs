@@ -8,6 +8,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController Instance { get; private set; }
+
     /*** References ***/
     private PlayerInput input;
     private new Camera camera;
@@ -25,7 +27,8 @@ public class PlayerController : MonoBehaviour
     public Vector2 MousePosition => camera.ScreenToWorldPoint(new Vector3(MouseScreenPosition.x, MouseScreenPosition.y, 0));
 
     private void Awake()
-    {        
+    {
+        Instance = this;
         input = GetComponent<PlayerInput>();
         camera = Camera.main;
 

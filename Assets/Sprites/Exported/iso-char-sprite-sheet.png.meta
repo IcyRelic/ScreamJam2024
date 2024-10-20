@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,7 +108,154 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: iso-char-sprite-sheet_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 4
+        width: 13
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8429444c411c8074dab91ab8a1faf50f
+      internalID: -1043506121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iso-char-sprite-sheet_1
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 4
+        width: 13
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ca2bea187783d6449e522367c033e3e
+      internalID: 49944947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iso-char-sprite-sheet_2
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 4
+        width: 13
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37737b8a04a102d47b134b99e6c5e06f
+      internalID: -1084747262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iso-char-sprite-sheet_3
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 4
+        width: 13
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c9f50c925541fa4dab40e0988823b93
+      internalID: -765001682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iso-char-sprite-sheet_4
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 4
+        width: 13
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9adf3ebeb2f94843883bc63bda37616
+      internalID: -766412120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iso-char-sprite-sheet_5
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 4
+        width: 13
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a893ac3ef1aec74f9a7c7a2d965615b
+      internalID: -130284264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iso-char-sprite-sheet_6
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 4
+        width: 13
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72c438af5b97f33429c1b629d5edb9d2
+      internalID: -1793093687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +266,14 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      iso-char-sprite-sheet_0: -1043506121
+      iso-char-sprite-sheet_1: 49944947
+      iso-char-sprite-sheet_2: -1084747262
+      iso-char-sprite-sheet_3: -765001682
+      iso-char-sprite-sheet_4: -766412120
+      iso-char-sprite-sheet_5: -130284264
+      iso-char-sprite-sheet_6: -1793093687
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
