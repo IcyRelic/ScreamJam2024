@@ -4,6 +4,31 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // some way to track progress
-    // a way to track timed events such as the player taking too long to complete the game resulting in a different ending or a way to trigger some dialogue "I should hurry..."
+    
+    /** References **/
+    [SerializeField] private GameObject pauseMenu;
+
+    void Start()
+    {
+        PlayerController.Instance.Pause.performed += _ => TogglePauseMenu();
+    }
+
+    private void TogglePauseMenu()
+    {
+        if (pauseMenu.activeSelf) ResumeGame();
+        else PauseGame();
+    }
+
+    private void PauseGame() 
+    {
+        Time.timeScale = 0;
+        pauseMenu.SetActive(true);
+    }
+
+    private void ResumeGame() 
+    {
+        Time.timeScale = 1;
+        pauseMenu.SetActive(false);
+        pauseMenu.GetComponent<PauseMenu>().CloseOptions();
+    }
 }

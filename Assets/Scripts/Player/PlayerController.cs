@@ -21,6 +21,8 @@ public class PlayerController : MonoBehaviour
     public InputAction SecondaryAction { get; private set; }
     public InputAction SkillCheck { get; private set; }
 
+    public InputAction Pause { get; private set; }
+
     /*** Input Values ***/
     public Vector2 MovementVector => Movement.ReadValue<Vector2>();
     public Vector2 MouseScreenPosition => Mouse.current.position.ReadValue();
@@ -37,6 +39,7 @@ public class PlayerController : MonoBehaviour
         PrimaryAction = input.actions["PrimaryAction"];
         SecondaryAction = input.actions["SecondaryAction"];
         SkillCheck = input.actions["SkillCheck"];
+        Pause = input.actions["Pause"];
 
 
     }
