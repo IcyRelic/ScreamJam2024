@@ -15,7 +15,7 @@ MonoBehaviour:
   characterName: Diary Page
   characterSprite: {fileID: 21300000, guid: 47f27da820d859548a80605353a5e90c, type: 3}
   lines:
-  - 'Day 500\nI am one with the land. I am one with the walls. I am one with this
+  - 'Day 500<br>I am one with the land. I am one with the walls. I am one with this
     place. I no longer need my body, it has withered away and fallen apart around
     this dusty haven. I have embraced myself and what my destiny is. '
-  - Day 500 (Cont.)\nI must protect this house...must protect....
+  - Day 500 (Cont.)<br>I must protect this house...must protect....

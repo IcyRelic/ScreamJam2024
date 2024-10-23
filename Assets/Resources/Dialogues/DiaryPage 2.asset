@@ -15,8 +15,8 @@ MonoBehaviour:
   characterName: Diary Page
   characterSprite: {fileID: 21300000, guid: 47f27da820d859548a80605353a5e90c, type: 3}
   lines:
-  - Day 30\nII finally had the time to clear out most of the basement but i found
+  - Day 30<br>I finally had the time to clear out most of the basement but i found
     something...odd. There's a locked door that I can't get open. I looked everywhere
     for the key but it's not in the house or in the shed.
-  - Day 30 (Cont.)\nI haven't checked the field yet, maybe this isn't the quiet and
-    cozy fixer upper I imagined it to be...
+  - Day 30 (Cont.)<br>I haven't checked the field yet, maybe this isn't the quiet
+    and cozy fixer upper I imagined it to be...

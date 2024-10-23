@@ -15,16 +15,16 @@ MonoBehaviour:
   characterName: Research Notes
   characterSprite: {fileID: 21300000, guid: 47f27da820d859548a80605353a5e90c, type: 3}
   lines:
-  - 'Date: 10/22/1895\nI''ve finally found the perfect spot for my research into
+  - 'Date: 10/22/1895<br>I''ve finally found the perfect spot for my research into
     the space between dimensions. I''ve consulted my star charts and this is the
     exact location that the astral channel flows through. '
-  - 'Date: 10/22/1895\nIf there''s any spot in the world that can be used to channel
+  - 'Date: 10/22/1895<br>If there''s any spot in the world that can be used to channel
     the dimensional beings I''ve seen in my dreams this must be it. They''ve talked
     to me while I sleep, they tell me to wait in the crop circle at midnight.'
-  - 'Date: 10/22/1895 (Cont.)\nThey''ve shown me the components to cast powerful
+  - 'Date: 10/22/1895 (Cont.)<br>They''ve shown me the components to cast powerful
     magic, they say that you must have 3 things. Oil, herbs, and something owned
     by whoever the subject of the spell is. Once all those are collected all that
     is needed is to say the words ycisgodxis. I will meet them tonight and learn
     more...'
-  - 'Date: 10/22/1895 (Cont.)\nOnce all those are collected all that is needed is
-    to say the words ycisgodxis. I will meet them tonight and learn more...'
+  - 'Date: 10/22/1895 (Cont.)<br>Once all those are collected all that is needed
+    is to say the words ycisgodxis. I will meet them tonight and learn more...'
