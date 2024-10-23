@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
@@ -9,7 +7,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private GameObject optionsMenu;
 
     public void NewGame() {
-
+        SceneManager.LoadScene(1);
     }
 
     public void OpenOptions() 

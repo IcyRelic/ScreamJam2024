@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38bc8650038f1264f860c7afa3e72b6b, type: 3}
+  m_Name: DiaryPage 4
+  m_EditorClassIdentifier: 
+  characterName: Research Notes
+  characterSprite: {fileID: 21300000, guid: 47f27da820d859548a80605353a5e90c, type: 3}
+  lines:
+  - 'Date: 10/22/1895\nI''ve finally found the perfect spot for my research into
+    the space between dimensions. I''ve consulted my star charts and this is the
+    exact location that the astral channel flows through. '
+  - 'Date: 10/22/1895\nIf there''s any spot in the world that can be used to channel
+    the dimensional beings I''ve seen in my dreams this must be it. They''ve talked
+    to me while I sleep, they tell me to wait in the crop circle at midnight.'
+  - 'Date: 10/22/1895 (Cont.)\nThey''ve shown me the components to cast powerful
+    magic, they say that you must have 3 things. Oil, herbs, and something owned
+    by whoever the subject of the spell is. Once all those are collected all that
+    is needed is to say the words ycisgodxis. I will meet them tonight and learn
+    more...'
+  - 'Date: 10/22/1895 (Cont.)\nOnce all those are collected all that is needed is
+    to say the words ycisgodxis. I will meet them tonight and learn more...'

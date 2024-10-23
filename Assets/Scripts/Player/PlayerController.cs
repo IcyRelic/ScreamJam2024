@@ -40,8 +40,6 @@ public class PlayerController : MonoBehaviour
         SecondaryAction = input.actions["SecondaryAction"];
         SkillCheck = input.actions["SkillCheck"];
         Pause = input.actions["Pause"];
-
-
     }
 
     public bool CanUseInput()

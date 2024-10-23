@@ -1,0 +1,78 @@
+{
+    "activeFile": "ExteriorTileMap.tmx",
+    "expandedProjectPaths": [
+        "."
+    ],
+    "fileStates": {
+        "Corn.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "ExampleTileMap.tmx": {
+            "scale": 5.5,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 542.909090909091,
+                "y": 296.6363636363636
+            }
+        },
+        "Exterior.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "ExteriorTileMap.tmx": {
+            "scale": 11,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 281.0909090909091,
+                "y": 176.22727272727275
+            }
+        },
+        "InteriorBasementTileMap.tmx": {
+            "scale": 8,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 493.625,
+                "y": 71.5625
+            }
+        },
+        "InteriorMainFloorTileMap.tmx": {
+            "scale": 8,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 212.875,
+                "y": 24.8125
+            }
+        },
+        "InteriorTileset.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1,
+            "scaleInEditor": 0.015625
+        },
+        "ScreamJamTileset.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 11
+        }
+    },
+    "openFiles": [
+        "ScreamJamTileset.tsx",
+        "ExampleTileMap.tmx",
+        "InteriorTileset.tsx",
+        "InteriorMainFloorTileMap.tmx",
+        "InteriorBasementTileMap.tmx",
+        "ExteriorTileMap.tmx",
+        "Exterior.tsx",
+        "Corn.tsx"
+    ],
+    "project": "ScreamJamTileMap.tiled-project",
+    "recentFiles": [
+        "ScreamJamTileset.tsx",
+        "ExampleTileMap.tmx",
+        "InteriorTileset.tsx",
+        "InteriorMainFloorTileMap.tmx",
+        "InteriorBasementTileMap.tmx",
+        "ExteriorTileMap.tmx",
+        "Exterior.tsx",
+        "Corn.tsx"
+    ]
+}

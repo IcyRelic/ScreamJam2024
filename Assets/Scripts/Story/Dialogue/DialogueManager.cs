@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,11 +14,15 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private TMP_Text characterNameText;
     [SerializeField] private Image characterImage;
 
+    [SerializeField] private TMP_Text thoughtText;
+    [SerializeField] private Animator thoughtAnim;
+
     [SerializeField] private Animator dialogueAnim;
 
     /** Variables **/
     private Queue<string> lines;
-
+    private Coroutine thoughtCoroutine = null;
+    private Coroutine dialogueCoroutine = null;
 
     private void Awake()
     {
@@ -36,6 +41,32 @@ public class DialogueManager : MonoBehaviour
         DisplayNextLine();
     }
 
+    public void StartThought(Dialogue dialogue)
+    {
+        if (thoughtCoroutine != null) StopCoroutine(thoughtCoroutine);
+        thoughtCoroutine = StartCoroutine(DisplayThought(dialogue.lines));
+    }
+
+    IEnumerator DisplayThought(string[] lines)
+    {
+        foreach (string line in lines)
+        {
+            thoughtText.text = line;
+            //fade in text
+            thoughtAnim.SetBool("Visible", true);
+            yield return new WaitForSeconds(3f);
+
+
+            //fade out text
+            thoughtAnim.SetBool("Visible", false);
+            yield return new WaitForSeconds(1f);
+        }
+
+        thoughtText.text = "";
+        thoughtCoroutine = null;
+        thoughtText.alpha = 0;
+    }
+
     public void DisplayNextLine()
     {
         if (lines.Count == 0)
@@ -45,8 +76,9 @@ public class DialogueManager : MonoBehaviour
         }
 
         string line = lines.Dequeue();
-        StopAllCoroutines();
-        StartCoroutine(TypeLine(line));
+        if (dialogueCoroutine != null) StopCoroutine(dialogueCoroutine);
+
+        dialogueCoroutine = StartCoroutine(TypeLine(line));
     }
 
     IEnumerator TypeLine(string line)
@@ -58,6 +90,8 @@ public class DialogueManager : MonoBehaviour
             dialogueLineText.text += letter;
             yield return null;
         }
+
+        dialogueCoroutine = null;
     }
 
     private void EndDialogue()

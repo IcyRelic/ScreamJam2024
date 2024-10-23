@@ -3,34 +3,75 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class Interactable : MonoBehaviour
+public abstract class Interactable : MonoBehaviour
 {
 
     /*** References ***/
-    private SpriteRenderer spriteRenderer;
-    private Material defaultMaterial;
-    [SerializeField] private Material outlineMaterial;
-    [SerializeField] private TMP_Text textMeshPro;
+    protected SpriteRenderer spriteRenderer;
+    protected Material defaultMaterial;
+    protected new Collider2D collider2D;
+    protected TMP_Text textMeshPro;
 
-    private void Awake()
+
+    /** Variables **/
+    [SerializeField] private bool hasSprite = true;
+
+    public virtual void Awake()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        defaultMaterial = spriteRenderer.material;
+        if(hasSprite)
+        {
+            spriteRenderer = GetComponent<SpriteRenderer>();
+            defaultMaterial = spriteRenderer.material;
+        }
+
+        collider2D = GetComponent<Collider2D>();
+        var canvas = GetComponentInChildren<Canvas>();
+        textMeshPro = canvas.GetComponentInChildren<TMP_Text>();
     }
 
     public void Highlight()
     {
-        spriteRenderer.material = outlineMaterial;
-        textMeshPro.text = PlayerController.Instance.GetControlSprite(PlayerController.Instance.Interact);
-        textMeshPro.gameObject.SetActive(true);
+        if(!CanInteract()) return;
+        if(hasSprite) spriteRenderer.material = GameManager.Instance.interactableHighlightMaterial;
+
+        SetHelpText(PlayerController.Instance.GetControlSprite(PlayerController.Instance.Interact));
+        textMeshPro.alpha = 1f;
+    }
+
+    protected virtual void SetHelpText(string text)
+    {
+        textMeshPro.text = text;
     }
 
     public void Unhighlight()
     {
-        spriteRenderer.material = defaultMaterial;
+        if(hasSprite) spriteRenderer.material = defaultMaterial;
+
         textMeshPro.text = "";
-        textMeshPro.gameObject.SetActive(true);
+        textMeshPro.alpha = 0f;
+    }
+    
+    public void AllowInteract(bool allow)
+    {
+        collider2D.enabled = allow;
     }
 
+    public bool CanInteract()
+    {
+        return collider2D.enabled;
+    }
 
+    public void DestroyInteractable()
+    {
+        Debug.Log("Destroying Interactable");
+        Destroy(gameObject);
+    }
+
+    protected abstract void Interact();
+
+    public void CallInteract()
+    {
+        Interact();
+        ProgressionManager.Instance.ProgressionCheck();
+    }
 }

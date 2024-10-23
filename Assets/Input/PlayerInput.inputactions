@@ -292,28 +292,6 @@
                 },
                 {
                     "name": "",
-                    "id": "99181595-306c-4981-b7a5-4d53767f27cc",
-                    "path": "<Gamepad>/rightShoulder",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad",
-                    "action": "Test",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "02510e19-9c01-4d9e-ae8b-934785b02b47",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "Test",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "e9a0e5f6-d7de-43ca-9d87-fb0102454037",
                     "path": "<Gamepad>/start",
                     "interactions": "",
@@ -331,6 +309,17 @@
                     "processors": "",
                     "groups": "Keyboard",
                     "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "423ce238-707d-471f-9826-bfecaf679e52",
+                    "path": "<Keyboard>/j",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Test",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -42,3 +42,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Ground
+    uniqueID: 757182711
+    locked: 0
+  - name: Normal
+    uniqueID: 914480575
+    locked: 0
+  - name: Objects
+    uniqueID: 2799870831
+    locked: 0
+  - name: ZItems
+    uniqueID: 2550477535
+    locked: 0
+  - name: UI
+    uniqueID: 794549835
+    locked: 0

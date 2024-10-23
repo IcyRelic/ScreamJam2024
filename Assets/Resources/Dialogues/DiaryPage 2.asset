@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38bc8650038f1264f860c7afa3e72b6b, type: 3}
+  m_Name: DiaryPage 2
+  m_EditorClassIdentifier: 
+  characterName: Diary Page
+  characterSprite: {fileID: 21300000, guid: 47f27da820d859548a80605353a5e90c, type: 3}
+  lines:
+  - Day 30\nII finally had the time to clear out most of the basement but i found
+    something...odd. There's a locked door that I can't get open. I looked everywhere
+    for the key but it's not in the house or in the shed.
+  - Day 30 (Cont.)\nI haven't checked the field yet, maybe this isn't the quiet and
+    cozy fixer upper I imagined it to be...

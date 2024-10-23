@@ -4,9 +4,21 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    
+    public static GameManager Instance { get; private set; }
+    public static bool IsGameOver { get; private set; } = false;
+
+
     /** References **/
     [SerializeField] private GameObject pauseMenu;
+
+
+    public Material interactableHighlightMaterial;
+
+    private void Awake()
+    {
+        if (Instance == null) Instance = this;
+        else Destroy(gameObject);
+    }
 
     void Start()
     {
@@ -23,6 +35,7 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 0;
         pauseMenu.SetActive(true);
+        FindObjectOfType<AudioManager>().StopAll();
     }
 
     private void ResumeGame() 
@@ -30,5 +43,9 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         pauseMenu.SetActive(false);
         pauseMenu.GetComponent<PauseMenu>().CloseOptions();
+        FindObjectOfType<AudioManager>().PlayMusic();
+        FindObjectOfType<AudioManager>().PlayAmbient();
     }
+
+
 }
