@@ -70,6 +70,8 @@ public class CropCircle : MapInteractable
 
         DraftEndingNotes();
 
+        FindObjectOfType<AudioManager>().StopAll();
+        FindObjectOfType<AudioManager>().ChangeMusic(2);
 
 
         StartCoroutine(FadeInEndingScreen());

@@ -33,7 +33,7 @@ public class Player : MonoBehaviour
         anim = GetComponent<Animator>();
         light = GetComponentInChildren<Light2D>();
 
-        controller.Interact.performed += ctx => Interact();
+        //controller.Interact.performed += ctx => Interact();
 
         lastInteractTime = Time.time;
     }
@@ -84,7 +84,7 @@ public class Player : MonoBehaviour
         if(!controller.CanUseInput()) return;
         Move(controller.MovementVector * movementSpeed);
 
-       //if(controller.Interact.triggered) Interact();
+       if(controller.Interact.triggered) Interact();
     }
 
     private void Move(Vector2 direction)
