@@ -15,6 +15,8 @@ public abstract class Interactable : MonoBehaviour
 
     /** Variables **/
     [SerializeField] private bool hasSprite = true;
+    [SerializeField] private bool playSFX = false;
+    [SerializeField] private int sfxID;
 
     public virtual void Awake()
     {
@@ -72,6 +74,12 @@ public abstract class Interactable : MonoBehaviour
     public void CallInteract()
     {
         Interact();
+        PlaySound();
         ProgressionManager.Instance.ProgressionCheck();
+    }
+
+    private void PlaySound()
+    {
+        if(playSFX) FindObjectOfType<AudioManager>().PlaySFX(sfxID);
     }
 }

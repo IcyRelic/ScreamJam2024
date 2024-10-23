@@ -8,10 +8,16 @@ public class LockedTeleporter : MapInteractable
     [SerializeField] private Transform destination;
     [SerializeField] private Dialogue onTriggerLockDialogue;
 
-    public bool Locked => !ProgressionManager.Instance.Key;
+
+    [SerializeField] private int musicID;
+    [SerializeField] private int ambientID;
+    [SerializeField] private bool switchMusic = false;
+    [SerializeField] private bool switchAmbient = false;
 
     /** Variables **/
     private bool dialogueTriggered = false;
+    
+    public bool Locked => !ProgressionManager.Instance.Key;
 
     protected override void Interact()
     {
@@ -23,15 +29,16 @@ public class LockedTeleporter : MapInteractable
 
     }
 
-    private void PlaySound()
+    private void SwitchTracks()
     {
-
+        if(switchMusic) FindObjectOfType<AudioManager>().ChangeMusic(musicID);
+        if(switchAmbient) FindObjectOfType<AudioManager>().ChangeAmbient(ambientID);
     }
 
     private void Teleport()
     {
         FindObjectOfType<Player>().Teleport(destination);
-        PlaySound();
+        SwitchTracks();
     }
 
     private void TriggerDialogue()

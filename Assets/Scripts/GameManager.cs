@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -47,5 +48,14 @@ public class GameManager : MonoBehaviour
         FindObjectOfType<AudioManager>().PlayAmbient();
     }
 
+    public void StartNewGame()
+    {
+        SceneManager.LoadScene(1);
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
 
 }

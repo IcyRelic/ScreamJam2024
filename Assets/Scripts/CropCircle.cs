@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,6 +19,8 @@ public class CropCircle : MapInteractable
     [SerializeField] private TMP_Text endingText;
     [SerializeField] private TMP_Text notesText;
     [SerializeField] private TMP_Text completionText;
+    [SerializeField] private Button newGameButton;
+    [SerializeField] private Button mainMenuButton;
 
     [SerializeField] private Sprite[] itemSprites;
     private Animator notesAnim;
@@ -91,6 +94,52 @@ public class CropCircle : MapInteractable
         StartCoroutine(DisplayEndingNotes());
     }
 
+    IEnumerator NotesFinished()
+    {
+        bossAnim.SetBool("Visible", false);
+        playerAnim.SetBool("Visible", false);
+        notesAnim.SetBool("Visible", false);
+        itemImageAnim.SetBool("Visible", false);
+
+
+        yield return new WaitForSeconds(1f);
+        StartCoroutine(FadeInButtons());
+        
+    }
+
+    private IEnumerator FadeInButtons()
+    {
+
+        yield return new WaitForSeconds(1f);
+
+        float elapsedTime = 0.0f;
+        float fadeDuration = 2f;
+
+        Image[] images = new Image[] {newGameButton.GetComponent<Image>(), mainMenuButton.GetComponent<Image>()};
+        TextMeshProUGUI[] texts = new TextMeshProUGUI[] {newGameButton.GetComponentInChildren<TextMeshProUGUI>(), mainMenuButton.GetComponentInChildren<TextMeshProUGUI>()};
+
+        while (elapsedTime < fadeDuration)
+        {
+            float alpha = Mathf.Lerp(0f, 1f, elapsedTime / fadeDuration);
+
+            foreach (Image img in images)
+            {
+                img.color = new Color(img.color.r, img.color.g, img.color.b, alpha);
+            }
+
+            foreach (TextMeshProUGUI text in texts)
+            {
+                text.alpha = alpha;
+            }
+
+            elapsedTime += Time.deltaTime;
+
+            yield return null;
+        }
+        endingScreen.GetComponent<CanvasGroup>().interactable = true;
+        endingScreen.GetComponent<CanvasGroup>().blocksRaycasts = true;
+    }
+
     IEnumerator DisplayEndingNotes()
     {
         yield return new WaitForSeconds(1f);
@@ -129,7 +178,7 @@ public class CropCircle : MapInteractable
                 yield return new WaitForSeconds(1f); 
             }
         }
-
+        StartCoroutine(NotesFinished());
         notesText.text = "";
         notesText.alpha = 0;
     }

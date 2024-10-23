@@ -112,45 +112,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1097882041296597299}
     m_Modifications:
-    - target: {fileID: 343481960921033047, guid: 0ea4f2e6c40b9a84291043ddba8fed9d, type: 3}
-      propertyPath: m_fontColor.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 343481960921033047, guid: 0ea4f2e6c40b9a84291043ddba8fed9d, type: 3}
-      propertyPath: m_fontColor32.rgba
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 2502084407395307937, guid: 0ea4f2e6c40b9a84291043ddba8fed9d, type: 3}
-      propertyPath: m_fontSize
-      value: 38
-      objectReference: {fileID: 0}
-    - target: {fileID: 2502084407395307937, guid: 0ea4f2e6c40b9a84291043ddba8fed9d, type: 3}
-      propertyPath: m_fontColor.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2502084407395307937, guid: 0ea4f2e6c40b9a84291043ddba8fed9d, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 38
-      objectReference: {fileID: 0}
-    - target: {fileID: 2502084407395307937, guid: 0ea4f2e6c40b9a84291043ddba8fed9d, type: 3}
-      propertyPath: m_fontColor32.rgba
-      value: 4278255103
-      objectReference: {fileID: 0}
     - target: {fileID: 5660820983106901666, guid: 0ea4f2e6c40b9a84291043ddba8fed9d, type: 3}
       propertyPath: m_Name
       value: GameOverScreen
-      objectReference: {fileID: 0}
-    - target: {fileID: 5660820983106901666, guid: 0ea4f2e6c40b9a84291043ddba8fed9d, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6177986904579211215, guid: 0ea4f2e6c40b9a84291043ddba8fed9d, type: 3}
-      propertyPath: m_fontColor.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6177986904579211215, guid: 0ea4f2e6c40b9a84291043ddba8fed9d, type: 3}
-      propertyPath: m_fontColor32.rgba
-      value: 4278255606
       objectReference: {fileID: 0}
     - target: {fileID: 6407749516722512632, guid: 0ea4f2e6c40b9a84291043ddba8fed9d, type: 3}
       propertyPath: m_Pivot.x
@@ -232,55 +196,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7270511517304162297, guid: 0ea4f2e6c40b9a84291043ddba8fed9d, type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7315869503905768784, guid: 0ea4f2e6c40b9a84291043ddba8fed9d, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 7315869503905768784, guid: 0ea4f2e6c40b9a84291043ddba8fed9d, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 150
-      objectReference: {fileID: 0}
-    - target: {fileID: 7557018616031181166, guid: 0ea4f2e6c40b9a84291043ddba8fed9d, type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8092598438624667968, guid: 0ea4f2e6c40b9a84291043ddba8fed9d, type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8598139378192563660, guid: 0ea4f2e6c40b9a84291043ddba8fed9d, type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5660820983106901666, guid: 0ea4f2e6c40b9a84291043ddba8fed9d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4617446833700006318}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ea4f2e6c40b9a84291043ddba8fed9d, type: 3}
---- !u!1 &7252440611972114398 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5660820983106901666, guid: 0ea4f2e6c40b9a84291043ddba8fed9d, type: 3}
-  m_PrefabInstance: {fileID: 3038415715127062908}
-  m_PrefabAsset: {fileID: 0}
---- !u!225 &4617446833700006318
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7252440611972114398}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 0
-  m_BlocksRaycasts: 0
-  m_IgnoreParentGroups: 0
 --- !u!224 &8270430544591967108 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6407749516722512632, guid: 0ea4f2e6c40b9a84291043ddba8fed9d, type: 3}
@@ -294,12 +214,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1097882041296597299}
     m_Modifications:
-    - target: {fileID: 2990798247808315250, guid: eb9c252b34df5004db048e2a42915f39, type: 3}
-      propertyPath: m_text
-      value: 'Date: 10/22/1895\nI''ve finally found the perfect spot for my research
-        into the space between dimensions. I''ve consulted my star charts and this
-        is the exact location that the astral channel flows through. '
-      objectReference: {fileID: 0}
     - target: {fileID: 4087435952901900922, guid: eb9c252b34df5004db048e2a42915f39, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

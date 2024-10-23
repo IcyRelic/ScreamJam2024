@@ -16,23 +16,15 @@ public class Teleporter : MapInteractable
     [SerializeField] private float dialogueDelay = 0f;
     [SerializeField] private int musicID;
     [SerializeField] private int ambientID;
-    [SerializeField] private int sfxID;
-
     [SerializeField] private bool switchMusic = false;
     [SerializeField] private bool switchAmbient = false;
-    [SerializeField] private bool playSFX = false;
 
     protected override void Interact()
     {
         FindObjectOfType<Player>().Teleport(destination);
-        if(playSFX) PlaySound();
+        //if(playSFX) PlaySound();
         if(onTriggerDialogue != null && !dialogueTriggered) Invoke("TriggerDialogue", dialogueDelay);
         SwitchTracks();
-    }
-
-    private void PlaySound()
-    {
-        FindObjectOfType<AudioManager>().PlaySFX(sfxID);
     }
 
     private void SwitchTracks()

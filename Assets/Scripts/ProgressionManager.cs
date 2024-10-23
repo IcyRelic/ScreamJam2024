@@ -87,6 +87,7 @@ public class ProgressionManager : MonoBehaviour
         {
             if(DiaryPage1 && DiaryPage2 && DiaryPage3 && DiaryPage4)
             {
+                Debug.Log("Progression Gate 2");
                 ProgressionGate2 = true;
                 FindObjectOfType<CropCircle>().AllowInteract(true);
             }
@@ -96,7 +97,7 @@ public class ProgressionManager : MonoBehaviour
         {
             if(Key)
             {
-                Debug   .Log("Progression Gate 3");
+                Debug.Log("Progression Gate 3");
                 ProgressionGate3 = true;
                 FindObjectsOfType<Scarecrow>().ToList().ForEach(i => i.DestroyInteractable());
             }

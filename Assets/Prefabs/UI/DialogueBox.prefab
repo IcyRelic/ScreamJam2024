@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -25, y: 20}
-  m_SizeDelta: {x: 108, y: 30}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 800, y: 225}
   m_Pivot: {x: 1, y: 0}
 --- !u!222 &8327953740697919282
 CanvasRenderer:
@@ -99,8 +99,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_HorizontalAlignment: 4
+  m_VerticalAlignment: 1024
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -301,10 +301,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lorem ipsum odor amet, consectetuer adipiscing elit. Odio malesuada congue
-    hac adipiscing fermentum sit neque faucibus. Aptent mi cubilia amet nunc iaculis.
-    Dui nec nibh risus quam aliquet pretium commodo. Euismod nec rutrum imperdiet
-    mus semper viverra netus.
+  m_text: 'Date: 10/22/1895\nI''ve finally found the perfect spot for my research
+    into the space between dimensions. I''ve consulted my star charts and this is
+    the exact location that the astral channel flows through. '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1008168f188e69240929fd9328dc650a, type: 2}
   m_sharedMaterial: {fileID: 1216209837124808206, guid: 1008168f188e69240929fd9328dc650a, type: 2}
